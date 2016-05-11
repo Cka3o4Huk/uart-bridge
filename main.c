@@ -39,7 +39,7 @@ int main(void) {
 	PORTD 	= 0b00000100; // power for router
 
 	/* Disable UART RX and TX */
-	UCSR0B &= ~_BV(RXEN0) && ~_BV(TXEN0);
+	UCSR0B &= ~_BV(RXEN0) & ~_BV(TXEN0);
 
 	while (1) {
 		switch (PIND & 0b00001001) {
